@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 
 # Configurações iniciais do arquivo Excel e da planilha
-caminho_arquivo_excel = "C:\\Users\\Lopez\\Desktop\\Excels\\CBOTest.xlsx"
+caminho_arquivo_excel = "caminhoDaPasta\\CBOTest.xlsx"
 nome_planilha = "Planilha1"
 
 # Leitura do arquivo Excel
@@ -103,7 +103,7 @@ for index, row in df.iterrows():
             codigos_ja_processados[codigo] = descricao_existente
 
 # Salvar o DataFrame atualizado no Excel
-caminho_saida_excel = "C:\\Users\\Lopez\\Desktop\\Excels\\CBO.xlsx"
+caminho_saida_excel = "caminhoDaPasta\\CBO.xlsx"
 df.to_excel(caminho_saida_excel, index=False)
 print("Atualização concluída e salva no arquivo Excel.")
 
